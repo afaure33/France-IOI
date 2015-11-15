@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 nbProduits = int(input())
-produits = [0]*nbProduits
+produits = [0] * nbProduits
 nbPersonnes = int(input())
 
 for loop in range(nbPersonnes):

@@ -7,7 +7,7 @@ nbEgalites = 0
 gagnant = "0"
 
 for loop in range(max(len(cardsPlayer1), len(cardsPlayer2))):
-    if loop+1 == len(cardsPlayer1) and loop+1 == len(cardsPlayer2):
+    if loop + 1 == len(cardsPlayer1) and loop + 1 == len(cardsPlayer2):
         gagnant = "="
         nbEgalites += 1
         break
@@ -33,4 +33,3 @@ for loop in range(max(len(cardsPlayer1), len(cardsPlayer2))):
 
 print(gagnant)
 print(nbEgalites)
-

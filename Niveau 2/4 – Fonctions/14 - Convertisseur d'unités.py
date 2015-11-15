@@ -7,19 +7,18 @@ def gets(*types):
 
 
 def meters2feet(value):
-    return value/0.3048
+    return value / 0.3048
 
 
 def grams2pounds(value):
-    return value*0.002205
+    return value * 0.002205
 
 
 def celsius2fahrenheit(value):
-    return 32+(1.8*value)
+    return 32 + (1.8 * value)
 
 
 nbValeurs = int(input())
-
 
 for loop in range(nbValeurs):
     valeur, unite = gets(float, str)

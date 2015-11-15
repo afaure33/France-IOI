@@ -7,6 +7,7 @@ def ligne_caracteres(caractere, longueur):
         print(caractere, end="")
     print()
 
+
 longueurDentelle = int(input())
 
 ligne_caracteres("X", longueurDentelle)

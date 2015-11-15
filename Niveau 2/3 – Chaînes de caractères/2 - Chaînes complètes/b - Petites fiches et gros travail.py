@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-titres = [None]*6
-auteurs = [None]*6
+titres = [None] * 6
+auteurs = [None] * 6
 
 for loop in range(6):
     auteurs[loop] = input()

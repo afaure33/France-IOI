@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 nbOperations = int(input())
-Ingredient = [0]*11
+Ingredient = [0] * 11
 
 for loop in range(nbOperations):
     numIngredient = int(input())

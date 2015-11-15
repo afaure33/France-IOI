@@ -7,7 +7,7 @@ def afficher_suite(number):
         if number % 2 == 0:
             number /= 2
         else:
-            number = number*3 + 1
+            number = number * 3 + 1
 
         print(int(number), end=" ")
 

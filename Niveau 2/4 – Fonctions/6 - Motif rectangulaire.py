@@ -4,7 +4,7 @@
 
 def afficher_feuille(lines, cols, char):
     for loop in range(lines):
-        print(char*cols)
+        print(char * cols)
 
 
 nbLignes = int(input())

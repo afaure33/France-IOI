@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 nbCharrettes = int(input())
-poids = [0]*nbCharrettes
+poids = [0] * nbCharrettes
 
 for loop in range(nbCharrettes):
     poids[loop] = float(input())
@@ -10,4 +10,4 @@ for loop in range(nbCharrettes):
 moyenne = sum(poids) / len(poids)
 
 for loop in range(nbCharrettes):
-    print(-(poids[loop]-moyenne))
+    print(-(poids[loop] - moyenne))

@@ -8,6 +8,7 @@ def demander_code():
         code_entre = int(input("Entrez le code : "))
         print()
 
+
 demander_code()
 print("Encore une fois.")
 demander_code()

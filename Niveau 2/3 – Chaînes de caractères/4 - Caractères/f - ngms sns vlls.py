@@ -13,4 +13,3 @@ bookAuthor = ''.join(c for c in bookAuthor if c not in 'AEIOUY ')
 
 print(bookTitle)
 print(bookAuthor)
-

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 nbPositions = int(input())
-positions = [0]*nbPositions
+positions = [0] * nbPositions
 
 nbChgtPositions = int(input())
 
