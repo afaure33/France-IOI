@@ -1,4 +1,5 @@
 from robot import *
+
 haut()
 haut()
 haut()
