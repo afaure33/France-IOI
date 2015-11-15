@@ -5,7 +5,7 @@
 def get_nb_amour(name):
     nbamour = 0
     for loop in range(len(name)):
-        nbamour += ord(name[loop])-65
+        nbamour += ord(name[loop]) - 65
 
     if nbamour < 10:
         return nbamour
@@ -24,6 +24,7 @@ def get_sum(number):
         number = str(number_tmp)
 
     return number
+
 
 prenom1, prenom2 = input().split()
 

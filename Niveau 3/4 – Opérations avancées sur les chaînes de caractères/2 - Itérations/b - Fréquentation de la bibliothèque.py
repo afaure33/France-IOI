@@ -11,4 +11,3 @@ while True:
         break
 
 print(somme)
-

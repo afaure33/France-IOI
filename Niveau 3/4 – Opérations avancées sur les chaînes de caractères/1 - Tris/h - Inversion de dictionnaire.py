@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 nbMots = int(input())
-couplesMots = [None]*nbMots
+couplesMots = [None] * nbMots
 
 for loop in range(nbMots):
     premier, second = input().split()

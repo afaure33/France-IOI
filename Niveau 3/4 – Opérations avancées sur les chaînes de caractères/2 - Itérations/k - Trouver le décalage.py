@@ -7,10 +7,10 @@ def find_most_frequent_letter(data):
     mostfrequentletter = "e"
 
     for idLetter in range(26):
-        nbtimes_tmp = data.count(chr(65+idLetter)) + data.count(chr(97+idLetter))
+        nbtimes_tmp = data.count(chr(65 + idLetter)) + data.count(chr(97 + idLetter))
 
         if nbtimes_tmp > nbtimes:
-            mostfrequentletter = chr(97+idLetter)
+            mostfrequentletter = chr(97 + idLetter)
             nbtimes = nbtimes_tmp
 
     return mostfrequentletter
@@ -43,5 +43,6 @@ def main():
     text = input()
 
     print(decrypt_text(text, int(ord("e") - ord(find_most_frequent_letter(text)))))
+
 
 main()

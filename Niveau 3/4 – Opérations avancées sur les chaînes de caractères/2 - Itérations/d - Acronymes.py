@@ -18,4 +18,3 @@ for loop in range(nbLivres):
 
         if firstLetterCorrect == len(acronyme):
             print(' '.join(titre).title())
-

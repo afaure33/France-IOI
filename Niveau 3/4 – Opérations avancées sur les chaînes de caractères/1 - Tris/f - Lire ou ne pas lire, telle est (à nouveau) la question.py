@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 nbLivres = int(input())
-titresLivres = [None]*nbLivres
+titresLivres = [None] * nbLivres
 
 count = 0
 
@@ -14,6 +14,6 @@ for loop in range(nbLivres):
     if loop == 0:
         print(titresLivres[loop])
         count = 0
-    elif titresLivres[loop] > titresLivres[loop-count]:
+    elif titresLivres[loop] > titresLivres[loop - count]:
         print(titresLivres[loop])
         count = 0

@@ -4,5 +4,4 @@
 nomAuteur = input()
 ageFilsAine = int(input())
 
-print(ord(nomAuteur[0])-64, chr(ageFilsAine+64), sep="")
-
+print(ord(nomAuteur[0]) - 64, chr(ageFilsAine + 64), sep="")
