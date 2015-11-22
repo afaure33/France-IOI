@@ -1,27 +1,36 @@
-# Les automobiles ont été numérotées selon leur ordre d'arrivée et
-# la seconde ligne contient nbAutomobiles entiers : les numéros des
-# automobiles au départ de la course.
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+
+def bubble_sort(data):
+    nbechanges = 0
+    echanges = []
+
+    n = len(data)
+    swapped_elements = True
+
+    while swapped_elements == True:
+        swapped_elements = False
+
+        for j in range(0, n - 1):
+            if data[j] > data[j + 1]:
+                swapped_elements = True
+                data[j], data[j + 1] = data[j + 1], data[j]
+
+                nbechanges += 1
+                echanges.append(str(data[j + 1]) + " " + str(data[j]))
+
+    return nbechanges, echanges
 
 
 def main():
-    nbEchanges = 0
-    echanges = ""
-
     nbAuto = int(input())
     numAutoDep = list(map(int, input().split()))
 
-    for iAuto1 in range(nbAuto):
-        while numAutoDep[iAuto1] != iAuto1 + 1:
-            for iAuto2 in range(iAuto1, nbAuto, 1):
-                if numAutoDep[iAuto2] == iAuto1 + 1:
-                    numAutoDep[iAuto2], numAutoDep[iAuto2 - 1] = numAutoDep[iAuto2 - 1], numAutoDep[iAuto2]
+    data = bubble_sort(numAutoDep)
 
-                    nbEchanges += 1
-                    echanges = echanges + str(numAutoDep[iAuto2]) + " " + str(numAutoDep[iAuto2 - 1]) + "\n"
-                    break
-
-    print(nbEchanges)
-    print(echanges)
+    print(data[0])
+    print("\n".join(data[1]))
 
 
 main()
