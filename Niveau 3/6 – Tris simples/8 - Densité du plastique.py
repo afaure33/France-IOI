@@ -2,35 +2,51 @@
 # -*- coding: utf-8 -*-
 
 
-def cherche_dico_rec(L, x):
-    """L tableau non vide trié dans l'ordre croissant, x un élément.
-    On renvoie True si x est dans L, False sinon"""
+import sys
 
-    n = len(L)
 
-    if n == 1:
-        return L[0] == x
+def RechercheDico(liste, elt):
+    """
+    RechercheSeq(list liste, int elt) -> int
+    Retourne la position de l'entier <elt> dans <liste>
+    triée et -1 si <elt> ne se trouve pas dans <liste>
+    """
 
-    m = n // 2
+    position = -1
+    gauche = 0
+    droite = len(liste) - 1
 
-    if L[m] == x:
-        return True
-    elif L[m] < x:
-        return cherche_dico_rec(L[m:], x)  # la partie gauche
-    else:
-        return cherche_dico_rec(L[:m], x)  # la partie droite
+    while gauche <= droite:
+        milieu = (gauche + droite) // 2
+
+        if elt == liste[milieu]:
+            position = milieu
+            break
+
+        else:
+            if elt < liste[milieu]:
+                droite = milieu - 1
+            else:
+                gauche = milieu + 1
+
+    return position
 
 
 def main():
-    nbBlocsStock = int(input())
+    nbBlocsStock = int(sys.stdin.readline())
     densiteBlocs = list(map(int, input().split()))
-    nbQuestions = int(input())
+    nbQuestions = int(sys.stdin.readline())
     densiteBlocs.sort()
 
     for loop in range(nbQuestions):
-        densiteDemandee = int(input())
+        densiteDemandee = int(sys.stdin.readline())
 
-        print(int(cherche_dico_rec(densiteBlocs, densiteDemandee)))
+        if (RechercheDico(densiteBlocs, densiteDemandee)) == -1:
+            sys.stdout.write("0")
+        else:
+            sys.stdout.write("1")
+
+        sys.stdout.write("\n")
 
 
 main()
