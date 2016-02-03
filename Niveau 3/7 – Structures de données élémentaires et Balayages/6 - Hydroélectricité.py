@@ -3,21 +3,26 @@
 
 import sys
 
-# def sublists(lst, n):
-#     return (lst[i:i+n] for i in range(len(lst) - n + 1))
-#
-# def max_sublist_sum(lst, n):
-#     return max(sum(sub) for sub in sublists(lst, n))
-
 
 def main():
+    slicetmp = 0
+
     longCentHydro, longRiviere = map(int, sys.stdin.readline().split())
     forceCourant = list(map(int, sys.stdin.readline().split()))
 
-    slices = (forceCourant[x:x + longCentHydro] for x in range(len(forceCourant) - longCentHydro + 1))
+    maxslice = sum(forceCourant[0:0 + longCentHydro])
+    slicetmp = sum(forceCourant[0:0 + longCentHydro])
 
-    print(max(map(sum,slices)))
-    # sys.stdout.write(str(max_sublist_sum(forceCourant, longCentHydro)))
+    for loop in range(len(forceCourant)-longCentHydro):
+        slicetmp -= forceCourant[loop]
+        slicetmp += forceCourant[loop+longCentHydro]
 
-    slices = (forceCourant[x:x + longCentHydro] for x in range(len(forceCourant) - longCentHydro + 1))
+        if slicetmp > maxslice:
+            maxslice = slicetmp
+
+    #for x in range(len(forceCourant) - longCentHydro + 1):
+        #slices.append(sum(forceCourant[x:x + longCentHydro]))
+
+    #print(max(slices))
+    print(maxslice)
 main()
